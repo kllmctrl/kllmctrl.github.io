@@ -1,0 +1,20 @@
+{
+  "name": "kllmctrl",
+  "version": "v2015",
+  "homepage": "https://github.com/kllmctrl/kllmctrl.github.com",
+  "authors": [
+    "kllmctrl <kllmctrl@gmail.com>"
+  ],
+  "main": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "http://code.jquery.com/jquery-1.11.2.min.js"
+  }
+}
