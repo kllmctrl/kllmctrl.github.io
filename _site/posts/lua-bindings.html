@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>kllmctrl blog | Lua Binding - cocos2dx c++ class</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Lua Binding - cocos2dx c++ class">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:4000/posts/lua-bindings">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="kllmctrl blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="http://localhost:4000/posts/lua-bindings">
+  <meta name="twitter:title" content="Lua Binding - cocos2dx c++ class">
+  <meta name="twitter:description" content="">
+
+  
+    <meta property="og:image" content="http://localhost:4000/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+    <meta name="twitter:image" content="http://localhost:4000/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+  
+
+  <link href="http://localhost:4000/feed.xml" type="application/rss+xml" rel="alternate" title="kllmctrl blog Last 10 blog posts" />
+
+  
+
+  
+
+    
+      <link rel="icon" type="image/x-icon" href="/assets/favicon-light-a98c41efc5ed9fcc06ac664c9e2f7a9b3c3b2e0a52357d221fe382f6f4abc8fc.ico">
+      <link rel="apple-touch-icon" href="/assets/apple-touch-icon-light-87d1f2a3a19b1500e5c1626a0492025ca5f7f97d24540dc5900288e92112925a.png">
+      <link rel="stylesheet" type="text/css" href="/assets/light-bb1553a18d0f1ccfe1aabc010584c49b4277a88503216b78906ba719e30019c1.css">
+    
+
+  
+
+</head>
+
+<body>
+  <main>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav scrollappear">
+  <a href="/" class="header-logo" title="kllmctrl blog">kllmctrl blog</a>
+  <ul class="header-links">
+    
+      <li>
+        <a href="/about" title="About me">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-about">
+  <use href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about" xlink:href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://github.com/kllmctrl" rel="noreferrer noopener" target="_blank" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-github">
+  <use href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github" xlink:href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="/feed.xml" rel="noreferrer noopener" target="_blank" title="RSS">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-rss">
+  <use href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss" xlink:href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+  </ul>
+</nav>
+
+
+
+        <article class="article scrollappear">
+          <header class="article-header">
+            <h1>Lua Binding - cocos2dx c++ class</h1>
+            <p></p>
+            <div class="article-list-footer">
+  <span class="article-list-date">
+    June 2, 2015
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      4 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+  </div>
+</div>
+          </header>
+
+          <div class="article-content">
+            <blockquote>
+  <p>自定义 C++ 类绑定 Lua</p>
+</blockquote>
+
+<hr />
+<p>例子:<br />
+用C++实现一个 MyClass 类，需要在 Lua 中使用<br />
+local test = my.MyClass:create()<br />
+print(“lua bind: “ .. test:foo(99))</p>
+
+<h3 id="自定义-c-类">自定义 C++ 类</h3>
+
+<p>Put them in Classes floder</p>
+
+<p>MyClass.h
+MyClass.cpp</p>
+
+<p>MyClass.h</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="cp">#include "cocos2d.h"
+</span>    <span class="n">using</span> <span class="n">namespace</span> <span class="n">cocos2d</span><span class="p">;</span>
+
+    <span class="n">class</span> <span class="n">MyClass</span> <span class="o">:</span> <span class="n">public</span> <span class="n">Ref</span>
+    <span class="p">{</span>
+    <span class="nl">public:</span>
+      <span class="n">MyClass</span><span class="p">()</span>   <span class="p">{};</span>
+      <span class="o">~</span><span class="n">MyClass</span><span class="p">()</span>  <span class="p">{};</span>
+      <span class="n">bool</span> <span class="n">init</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="nb">true</span><span class="p">;</span> <span class="p">};</span>
+      <span class="n">CREATE_FUNC</span><span class="p">(</span><span class="n">MyClass</span><span class="p">);</span>
+      <span class="kt">int</span> <span class="n">foo</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">);</span>
+    <span class="p">};</span>
+
+</code></pre></div></div>
+
+<p>MyClass.cpp</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="cp">#include "MyClass.h"
+</span>
+    <span class="kt">int</span> <span class="n">MyClass</span><span class="o">::</span><span class="n">foo</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="k">return</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">100</span><span class="p">;</span>
+    <span class="p">}</span>
+
+</code></pre></div></div>
+
+<h3 id="配置-ini">配置 .ini</h3>
+
+<p>复制 frameworks/cocos2d-x/tools/tolua/**.ini 到 frameworks/cocos2d-x/tools/tolua/MyClass.ini</p>
+
+<p>config that to link the MyClass.h path and  MyClass lua pageage.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="p">[</span><span class="no">MyClass</span><span class="p">]</span>
+
+    <span class="n">prefix</span> <span class="o">=</span> <span class="no">MyClass</span>
+
+    <span class="n">target_namespace</span> <span class="o">=</span> <span class="n">my</span>
+
+    <span class="n">android_headers</span> <span class="o">=</span> 
+    <span class="o">-</span><span class="no">I</span><span class="o">%</span><span class="p">(</span><span class="n">androidndkdir</span><span class="p">)</span><span class="n">s</span><span class="o">/</span><span class="n">platforms</span><span class="o">/</span><span class="n">android</span><span class="o">-</span><span class="mi">14</span><span class="o">/</span><span class="n">arch</span><span class="o">-</span><span class="n">arm</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="kp">include</span> 
+    <span class="o">-</span><span class="no">I</span><span class="o">%</span><span class="p">(</span><span class="n">androidndkdir</span><span class="p">)</span><span class="n">s</span><span class="o">/</span><span class="n">sources</span><span class="o">/</span><span class="n">cxx</span><span class="o">-</span><span class="n">stl</span><span class="o">/</span><span class="n">gnu</span><span class="o">-</span><span class="n">libstdc</span><span class="o">++</span><span class="sr">/4.7/</span><span class="n">libs</span><span class="o">/</span><span class="n">armeabi</span><span class="o">-</span><span class="n">v7a</span><span class="o">/</span><span class="kp">include</span> 
+    <span class="o">-</span><span class="no">I</span><span class="o">%</span><span class="p">(</span><span class="n">androidndkdir</span><span class="p">)</span><span class="n">s</span><span class="o">/</span><span class="n">sources</span><span class="o">/</span><span class="n">cxx</span><span class="o">-</span><span class="n">stl</span><span class="o">/</span><span class="n">gnu</span><span class="o">-</span><span class="n">libstdc</span><span class="o">++</span><span class="sr">/4.7/in</span><span class="n">clude</span> 
+    <span class="o">-</span><span class="no">I</span><span class="o">%</span><span class="p">(</span><span class="n">androidndkdir</span><span class="p">)</span><span class="n">s</span><span class="o">/</span><span class="n">sources</span><span class="o">/</span><span class="n">cxx</span><span class="o">-</span><span class="n">stl</span><span class="o">/</span><span class="n">gnu</span><span class="o">-</span><span class="n">libstdc</span><span class="o">++</span><span class="sr">/4.8/</span><span class="n">libs</span><span class="o">/</span><span class="n">armeabi</span><span class="o">-</span><span class="n">v7a</span><span class="o">/</span><span class="kp">include</span> 
+    <span class="o">-</span><span class="no">I</span><span class="o">%</span><span class="p">(</span><span class="n">androidndkdir</span><span class="p">)</span><span class="n">s</span><span class="o">/</span><span class="n">sources</span><span class="o">/</span><span class="n">cxx</span><span class="o">-</span><span class="n">stl</span><span class="o">/</span><span class="n">gnu</span><span class="o">-</span><span class="n">libstdc</span><span class="o">++</span><span class="sr">/4.8/in</span><span class="n">clude</span>
+    <span class="n">android_flags</span> <span class="o">=</span> <span class="o">-</span><span class="no">D_SIZE_T_DEFINED_</span> 
+
+    <span class="n">clang_headers</span> <span class="o">=</span> <span class="o">-</span><span class="no">I</span><span class="o">%</span><span class="p">(</span><span class="n">clangllvmdir</span><span class="p">)</span><span class="n">s</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">clang</span><span class="o">/</span><span class="mf">3.3</span><span class="o">/</span><span class="kp">include</span> 
+    <span class="n">clang_flags</span> <span class="o">=</span> <span class="o">-</span><span class="n">nostdinc</span> <span class="o">-</span><span class="n">x</span> <span class="n">c</span><span class="o">++</span> <span class="o">-</span><span class="n">std</span><span class="o">=</span><span class="n">c</span><span class="o">++</span><span class="mi">11</span>
+
+    <span class="n">cocos_headers</span> <span class="o">=</span> <span class="o">-</span><span class="no">I</span><span class="o">%</span><span class="p">(</span><span class="n">cocosdir</span><span class="p">)</span><span class="n">s</span><span class="o">/</span><span class="n">cocos</span> <span class="o">-</span><span class="no">I</span><span class="o">%</span><span class="p">(</span><span class="n">cocosdir</span><span class="p">)</span><span class="n">s</span><span class="o">/</span><span class="n">cocos</span><span class="o">/</span><span class="n">platform</span><span class="o">/</span><span class="n">android</span>
+    <span class="n">cocos_flags</span> <span class="o">=</span> <span class="o">-</span><span class="no">DANDROID</span>
+
+    <span class="n">cxxgenerator_headers</span> <span class="o">=</span> 
+
+    <span class="n">extra_arguments</span> <span class="o">=</span> <span class="sx">%(android_headers)</span><span class="n">s</span> <span class="sx">%(clang_headers)</span><span class="n">s</span> <span class="sx">%(cxxgenerator_headers)</span><span class="n">s</span> 
+    <span class="sx">%(cocos_headers)</span><span class="n">s</span> <span class="sx">%(android_flags)</span><span class="n">s</span> <span class="sx">%(clang_flags)</span><span class="n">s</span> <span class="sx">%(cocos_flags)</span><span class="n">s</span> 
+    <span class="sx">%(extra_flags)</span><span class="n">s</span> 
+
+    <span class="n">headers</span> <span class="o">=</span> <span class="sx">%(cocosdir)</span><span class="n">s</span><span class="o">/..</span><span class="sr">/runtime-src/</span><span class="no">XXX</span><span class="o">/</span><span class="no">Classes</span><span class="o">/</span><span class="no">MyClass</span><span class="p">.</span><span class="nf">h</span>
+
+    <span class="n">classes</span> <span class="o">=</span> <span class="no">MyClass</span>
+
+    <span class="n">skip</span> <span class="o">=</span>
+
+    <span class="n">rename_functions</span> <span class="o">=</span> 
+
+    <span class="n">rename_classes</span> <span class="o">=</span> 
+
+    <span class="n">remove_prefix</span> <span class="o">=</span> 
+
+    <span class="n">classes_have_no_parents</span> <span class="o">=</span> 
+
+    <span class="n">base_classes_to_skip</span> <span class="o">=</span> 
+
+    <span class="n">abstract_classes</span> <span class="o">=</span> 
+
+    <span class="n">script_control_cpp</span> <span class="o">=</span> <span class="n">no</span>
+
+</code></pre></div></div>
+
+<p>修改 genbindings.py 中的 129 行代码</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cmd_args</span> <span class="o">=</span> <span class="p">{</span><span class="c1">#'cocos2dx.ini' : ('cocos2d-x', 'lua_cocos2dx_auto'), \</span>
+    <span class="c1">#'cocos2dx_extension.ini' : ('cocos2dx_extension', </span>
+    <span class="n">lua_cocos2dx_extension_auto</span><span class="s1">'), \
+    #'</span><span class="n">cocos2dx_ui</span><span class="p">.</span><span class="nf">ini</span><span class="s1">' : ('</span><span class="n">cocos2dx_ui</span><span class="s1">', '</span><span class="n">lua_cocos2dx_ui_auto</span><span class="s1">'), \
+    #'</span><span class="n">cocos2dx_studio</span><span class="p">.</span><span class="nf">ini</span><span class="s1">' : ('</span><span class="n">cocos2dx_studio</span><span class="s1">', '</span><span class="n">lua_cocos2dx_studio_auto</span><span class="s1">'), \
+    #'</span><span class="n">cocos2dx_spine</span><span class="p">.</span><span class="nf">ini</span><span class="s1">' : ('</span><span class="n">cocos2dx_spine</span><span class="s1">', '</span><span class="n">lua_cocos2dx_spine_auto</span><span class="s1">'), \
+    #'</span><span class="n">cocos2dx_physics</span><span class="p">.</span><span class="nf">ini</span><span class="s1">' : ('</span><span class="n">cocos2dx_physics</span><span class="s1">', '</span><span class="n">lua_cocos2dx_physics_auto</span><span class="s1">'), \
+    #'</span><span class="n">cocos2dx_experimental_video</span><span class="p">.</span><span class="nf">ini</span><span class="s1">' : ('</span><span class="n">cocos2dx_experimental_video</span><span class="s1">', 
+    '</span><span class="n">lua_cocos2dx_experimental_video_auto</span><span class="s1">'), \
+    #'</span><span class="n">cocos2dx_experimental</span><span class="p">.</span><span class="nf">ini</span><span class="s1">' : ('</span><span class="n">cocos2dx_experimental</span><span class="s1">', 
+    '</span><span class="n">lua_cocos2dx_experimental_auto</span><span class="s1">'), \
+    #'</span><span class="n">cocos2dx_controller</span><span class="p">.</span><span class="nf">ini</span><span class="s1">' : ('</span><span class="n">cocos2dx_controller</span><span class="s1">', 
+    '</span><span class="n">lua_cocos2dx_controller_auto</span><span class="s1">'), \
+    '</span><span class="no">MyClass</span><span class="p">.</span><span class="nf">ini</span><span class="s1">' : ('</span><span class="no">MyClass</span><span class="s1">', '</span><span class="n">lua_MyClass_auto</span><span class="err">'</span><span class="p">),</span> <span class="p">\</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<p>运行脚本</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="n">python</span> <span class="n">genbindings</span><span class="p">.</span><span class="nf">py</span>
+
+</code></pre></div></div>
+
+<p>如果脚本执行成功，即生成文件</p>
+
+<p>lua_MyClass_auto.hpp
+lua_MyClass_auto.cpp</p>
+
+<p>in frameworks/cocos2d-x/cocos/scripting/lua-bindings/auto/</p>
+
+<h3 id="在工程注册-myclass-类">在工程注册 MyClass 类</h3>
+
+<p>in AppDelegate.cpp</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="cp">#include "lua_MyClass_auto.hpp"
+</span>
+</code></pre></div></div>
+
+<p>and</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">register_all_MyClass</span><span class="p">(</span><span class="n">engine</span><span class="o">-&gt;</span><span class="n">getLuaStack</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getLuaState</span><span class="p">());</span>
+
+</code></pre></div></div>
+
+<h3 id="在-lua-中使用-myclass-类">在 Lua 中使用 MyClass 类</h3>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">local</span> <span class="n">test</span> <span class="o">=</span> <span class="n">my</span><span class="p">.</span><span class="n">MyClass</span><span class="p">:</span><span class="n">create</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"lua bind: "</span> <span class="o">..</span> <span class="n">test</span><span class="p">:</span><span class="n">foo</span><span class="p">(</span><span class="mi">99</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h3 id="ios">IOS</h3>
+
+<p>add 
+lua_MyClass_auto.hpp
+lua_MyClass_auto.cpp
+to cocos2d_lua_bindings.xcodeproj</p>
+
+<p>add
+MyClass.h
+MyClass.cpp
+to project</p>
+
+<p>in cocos2d_lua_bindings.xcodeproj add MyClass.h ‘s path</p>
+
+<p>User Header Search Paths</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span><span class="p">(</span><span class="no">SRCROOT</span><span class="p">)</span><span class="o">/..</span><span class="sr">/../</span><span class="o">..</span><span class="sr">/../</span><span class="o">..</span><span class="sr">/runtime-src/</span><span class="no">XXX</span><span class="o">/</span><span class="no">Classes</span>
+
+</code></pre></div></div>
+
+<p>then build and run-&gt;Sucesss</p>
+
+<h3 id="android">Android</h3>
+
+<p>add MyClass.cpp file to</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">LOCAL_SRC_FILES</span> <span class="p">:</span><span class="o">=</span> <span class="n">hellolua</span><span class="o">/</span><span class="n">main</span><span class="p">.</span><span class="nf">cpp</span> <span class="p">\</span>
+                   <span class="o">..</span><span class="sr">/../</span><span class="no">Classes</span><span class="o">/</span><span class="no">AppDelegate</span><span class="p">.</span><span class="nf">cpp</span> <span class="p">\</span>
+                   <span class="o">..</span><span class="sr">/../</span><span class="no">Classes</span><span class="o">/</span><span class="no">MyClass</span><span class="p">.</span><span class="nf">cpp</span>
+
+</code></pre></div></div>
+
+<p>and then modify lua-bindings ‘s Android.mk</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="no">LOCAL_SRC_FILES</span>
+
+<span class="n">add</span> <span class="n">auto</span><span class="o">/</span><span class="n">lua_MyClass_auto</span><span class="p">.</span><span class="nf">cpp</span>
+
+<span class="no">LOCAL_C_INCLUDES</span>
+
+<span class="err">$</span><span class="p">(</span><span class="no">LOCAL_PATH</span><span class="p">)</span><span class="o">/..</span><span class="sr">/../</span><span class="o">..</span><span class="sr">/../</span><span class="n">runtime</span><span class="o">-</span><span class="n">src</span><span class="o">/</span><span class="no">XXX</span><span class="o">/</span><span class="no">Classes</span>
+</code></pre></div></div>
+
+
+          </div>
+         <!--  <div class="article-share">
+            
+            
+            <a href="https://twitter.com/home?status=Lua+Binding+-+cocos2dx+c+++class%20-%20http://localhost:4000/posts/lua-bindings" title="Share on Twitter" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6 -18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6 0.8 15 2.5 22.1 -80.5-4-151.9-42.6-199.6-101.3 -8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 0.4 0 0.8 0 1.2 0 47 33.4 86.1 77.7 95 -8.1 2.2-16.7 3.4-25.5 3.4 -6.2 0-12.3-0.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3 -33.1 26-74.9 41.5-120.3 41.5 -7.8 0-15.5-0.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-0.1-8.4-0.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/posts/lua-bindings" title="Share on Facebook" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"/></svg>
+            </a>
+          </div> -->
+
+          
+          </script>
+          <script data-ad-client="ca-pub-6102674837556895" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+          
+        </article>
+        <footer class="footer scrollappear">
+  <p>
+    tech sharing
+    <a href="/about" title="About me">kllmctrl</a>. 
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64162955-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-64162955-2');
+  </script>
+
+
+<script src="/assets/vendor-130c9c254effc51f3283620bc635851da7b99c20901216948f11ba72ee13317f.js" type="text/javascript"></script>
+
+
+  <script src="/assets/webfonts-96493456d319d1bf419afdf8701552d4d486fee6afd304897d4fd81eb4e0cc0b.js" type="text/javascript"></script>
+
+
+
+  <script src="/assets/scrollappear-e2da8ea567e418637e31266cc5302126eaa79f62a2273739086358b589a89ee6.js" type="text/javascript"></script>
+
+
+<script src="/assets/application-cfde13ac81ddaf4351b2e739603e2baf688d0fcc9aba613fe62bbb1c7b037fb9.js" type="text/javascript"></script>
+
+
+</body>
+</html>
