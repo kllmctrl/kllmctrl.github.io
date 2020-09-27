@@ -3,4 +3,9 @@ layout: page
 title: About
 ---
 
-Introduce yourself here... so people will know who you are and what you do.. blah..blah..blah..
+- App developer (iOS/Android/macOS)
+- Game Developer (cocos2dx/unity3d/lua)
+
+Email: kllmctrl@gmail.com
+
+
