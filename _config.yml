@@ -10,7 +10,7 @@ permalink: /:categories/:title/
 # Build settings
 kramdown:
   input: GFM
-permalink: pretty
+# permalink: pretty
 
 # Third-party services
 # just leave empty to disable it
