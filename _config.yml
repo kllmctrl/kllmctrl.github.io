@@ -5,12 +5,15 @@ baseurl: "/" # required if used under gh-pages branch, else (under master branch
 url: "https://kllmctrl.github.io"
 author: "kllmctrl"
 
-# permalink: /:categories/:title/
 
 # Build settings
 kramdown:
   input: GFM
-permalink: pretty
+
+# permalink: pretty
+# permalink: /:categories/:title/
+# permalink: /:categories/:year/:month/:day/:title:output_ext
+permalink: /:year/:month/:day/:title.html
 
 # Third-party services
 # just leave empty to disable it
