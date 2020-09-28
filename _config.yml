@@ -25,4 +25,8 @@ exclude: ["LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "script"]
 gems:
     -jekyll-seo-tag
 
-
+sitemap:
+  lastmod: 2020-09-28
+  priority: 0.7
+  changefreq: 'weekly'
+  exclude: 'yes'
