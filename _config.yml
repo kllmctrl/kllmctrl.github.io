@@ -2,7 +2,7 @@
 title: "kllmctrl"
 description: "tech sharing"
 baseurl: "/" # required if used under gh-pages branch, else (under master branch) just leave empty/blank
-url: ""
+url: "https://kllmctrl.github.io"
 author: "kllmctrl"
 
 permalink: /:categories/:title/
