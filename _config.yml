@@ -5,6 +5,8 @@ baseurl: "/" # required if used under gh-pages branch, else (under master branch
 url: ""
 author: "kllmctrl"
 
+permalink: /:categories/:title/
+
 # Build settings
 kramdown:
   input: GFM
@@ -19,3 +21,8 @@ plugins:
   - jekyll-sitemap
 
 exclude: ["LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "script"]
+
+gems:
+    -jekyll-seo-tag
+
+
