@@ -18,7 +18,7 @@ permalink: /:year/:month/:day/:title.html
 # Third-party services
 # just leave empty to disable it
 google_analytics: UA-64162955-2
-disqus_shortname: 
+disqus_shortname: kllmctrl
 
 plugins:
   - jekyll-sitemap
