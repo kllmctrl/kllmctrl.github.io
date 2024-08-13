@@ -207,6 +207,314 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "_config.yml",
+			"settings":
+			{
+				"buffer_size": 6731,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					5,
+					1,
+					"insert",
+					{
+						"characters": "blog"
+					},
+					"BQAAAGEXAAAAAAAAYhcAAAAAAAAAAAAAYhcAAAAAAABiFwAAAAAAAAUAAABwb3N0c2IXAAAAAAAAYxcAAAAAAAAAAAAAYxcAAAAAAABkFwAAAAAAAAAAAABkFwAAAAAAAGUXAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABhFwAAAAAAAGYXAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					14,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAG0XAAAAAAAAbhcAAAAAAAAAAAAAbhcAAAAAAAB0FwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABtFwAAAAAAAG0XAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					15,
+					1,
+					"paste",
+					null,
+					"AQAAAHQXAAAAAAAAjBcAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAB0FwAAAAAAAHQXAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					20,
+					1,
+					"insert",
+					{
+						"characters": "posts"
+					},
+					"BgAAAIAXAAAAAAAAgRcAAAAAAAAAAAAAgRcAAAAAAACBFwAAAAAAAAQAAABibG9ngRcAAAAAAACCFwAAAAAAAAAAAACCFwAAAAAAAIMXAAAAAAAAAAAAAIMXAAAAAAAAhBcAAAAAAAAAAAAAhBcAAAAAAACFFwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACAFwAAAAAAAIQXAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					22,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAFUXAAAAAAAAVxcAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABmFwAAAAAAAGYXAAAAAAAAAAAAAABAaUA"
+				],
+				[
+					31,
+					1,
+					"left_delete",
+					null,
+					"AQAAAGYDAAAAAAAAZgMAAAAAAAAJAAAAZ2l0aHViLmlv",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABmAwAAAAAAAG8DAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					32,
+					1,
+					"insert",
+					{
+						"characters": "com"
+					},
+					"AwAAAGYDAAAAAAAAZwMAAAAAAAAAAAAAZwMAAAAAAABoAwAAAAAAAAAAAABoAwAAAAAAAGkDAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABmAwAAAAAAAGYDAAAAAAAAAAAAAAAA8L8"
+				]
+			]
+		},
+		{
+			"file": "_tabs/about.md",
+			"settings":
+			{
+				"buffer_size": 448,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					3,
+					1,
+					"left_delete",
+					null,
+					"AQAAAEMAAAAAAAAAQwAAAAAAAAABAAAANA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABEAAAAAAAAAEQAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					4,
+					1,
+					"insert",
+					{
+						"characters": "3"
+					},
+					"AQAAAEMAAAAAAAAARAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABDAAAAAAAAAEMAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					12,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAEoAAAAAAAAASwAAAAAAAAAAAAAASwAAAAAAAABLAAAAAAAAAHgAAAA+IEFkZCBNYXJrZG93biBzeW50YXggY29udGVudCB0byBmaWxlIGBfdGFicy9hYm91dC5tZGB7OiAuZmlsZXBhdGggfSBhbmQgaXQgd2lsbCBzaG93IHVwIG9uIHRoaXMgcGFnZS4KezogLnByb21wdC10aXAgfQo",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADCAAAAAAAAAEoAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					13,
+					1,
+					"paste",
+					null,
+					"AQAAAEsAAAAAAAAApAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABLAAAAAAAAAEsAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					19,
+					1,
+					"left_delete",
+					null,
+					"AQAAAFcAAAAAAAAAVwAAAAAAAAA2AAAACi0g8J+QviBQZXQgcGFyZW50IHRvIDIgY2F0cyDwn5CIIGFuZCAxIFNoaWJhIEludSDwn5CV",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACEAAAAAAAAAFcAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					26,
+					1,
+					"insert",
+					{
+						"characters": "Game"
+					},
+					"BQAAAGQAAAAAAAAAZQAAAAAAAAAAAAAAZQAAAAAAAABlAAAAAAAAAAkAAABGcm9udC1FbmRlAAAAAAAAAGYAAAAAAAAAAAAAAGYAAAAAAAAAZwAAAAAAAAAAAAAAZwAAAAAAAABoAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABkAAAAAAAAAG0AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					30,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAHIAAAAAAAAAcwAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAByAAAAAAAAAHIAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					37,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"AgAAAHMAAAAAAAAAdAAAAAAAAAAAAAAAdAAAAAAAAAB1AAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABzAAAAAAAAAHMAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					38,
+					1,
+					"paste",
+					null,
+					"AQAAAHUAAAAAAAAAfwAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAB1AAAAAAAAAHUAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					40,
+					1,
+					"insert",
+					{
+						"characters": "\n\n\n"
+					},
+					"AwAAAH8AAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAACBAAAAAAAAAAAAAACBAAAAAAAAAIIAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAB/AAAAAAAAAH8AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					44,
+					1,
+					"paste",
+					null,
+					"AQAAAIEAAAAAAAAAlQEAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACBAAAAAAAAAIEAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					46,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"AgAAAJUBAAAAAAAAlgEAAAAAAAAAAAAAlgEAAAAAAACXAQAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACVAQAAAAAAAJUBAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					67,
+					1,
+					"left_delete",
+					null,
+					"AQAAAHQBAAAAAAAAdAEAAAAAAAAMAAAA572X572X56OK56OK",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAB4AQAAAAAAAHQBAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					68,
+					1,
+					"insert",
+					{
+						"characters": "jkk"
+					},
+					"AwAAAHQBAAAAAAAAdQEAAAAAAAAAAAAAdQEAAAAAAAB2AQAAAAAAAAAAAAB2AQAAAAAAAHcBAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAB0AQAAAAAAAHQBAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					69,
+					3,
+					"left_delete",
+					null,
+					"AwAAAHYBAAAAAAAAdgEAAAAAAAABAAAAa3UBAAAAAAAAdQEAAAAAAAABAAAAa3QBAAAAAAAAdAEAAAAAAAABAAAAag",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAB3AQAAAAAAAHcBAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					70,
+					1,
+					"insert",
+					{
+						"characters": "kllmctrl"
+					},
+					"CAAAAHQBAAAAAAAAdQEAAAAAAAAAAAAAdQEAAAAAAAB2AQAAAAAAAAAAAAB2AQAAAAAAAHcBAAAAAAAAAAAAAHcBAAAAAAAAeAEAAAAAAAAAAAAAeAEAAAAAAAB5AQAAAAAAAAAAAAB5AQAAAAAAAHoBAAAAAAAAAAAAAHoBAAAAAAAAewEAAAAAAAAAAAAAewEAAAAAAAB8AQAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAB0AQAAAAAAAHQBAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					81,
+					1,
+					"paste",
+					null,
+					"AgAAAOQAAAAAAAAA7AAAAAAAAAAAAAAA7AAAAAAAAADsAAAAAAAAAAgAAABaVU9MVU9UVg",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADkAAAAAAAAAOwAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					89,
+					1,
+					"left_delete",
+					null,
+					"AQAAAEkBAAAAAAAASQEAAAAAAAAaAAAAaHR0cHM6Ly96dW9sdW8udHYvYmlsaWJpbGk",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABJAQAAAAAAAGMBAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					90,
+					1,
+					"paste",
+					null,
+					"AQAAAEkBAAAAAAAAbQEAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABJAQAAAAAAAEkBAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					96,
+					1,
+					"left_delete",
+					null,
+					"AQAAAIgBAAAAAAAAiAEAAAAAAAAaAAAAaHR0cHM6Ly96dW9sdW8udHYvYmlsaWJpbGk",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACIAQAAAAAAAKIBAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					97,
+					1,
+					"paste",
+					null,
+					"AQAAAIgBAAAAAAAArAEAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACIAQAAAAAAAIgBAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					107,
+					1,
+					"left_delete",
+					null,
+					"AQAAAL8AAAAAAAAAvwAAAAAAAAAZAAAAaHR0cHM6Ly96dW9sdW8udHYveW91dHViZQ",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAC/AAAAAAAAANgAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					108,
+					1,
+					"paste",
+					null,
+					"AQAAAL8AAAAAAAAA4AAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAC/AAAAAAAAAL8AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					114,
+					1,
+					"left_delete",
+					null,
+					"AQAAAPYAAAAAAAAA9gAAAAAAAAAZAAAAaHR0cHM6Ly96dW9sdW8udHYveW91dHViZQ",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAD2AAAAAAAAAA8BAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					115,
+					1,
+					"paste",
+					null,
+					"AQAAAPYAAAAAAAAAFwEAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAD2AAAAAAAAAPYAAAAAAAAAAAAAAAAA8L8"
+				]
+			]
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -265,10 +573,16 @@
 	},
 	"expanded_folders":
 	[
-		"/C/work/projects/kllmctrl.github.io"
+		"/C/work/projects/kllmctrl.github.io",
+		"/C/work/projects/kllmctrl.github.io/_includes",
+		"/C/work/projects/kllmctrl.github.io/_tabs"
 	],
 	"file_history":
 	[
+		"/C/work/projects/kllmctrl.github.io/assets/robots.txt",
+		"/C/work/projects/kllmctrl.github.io/sitemap.xml",
+		"/C/work/projects/kllmctrl.github.io/ads.txt",
+		"/C/work/projects/kllmctrl.github.io/CNAME",
 		"/D/backup/work/rios/project_bk/doll001-unity-lua/Assets/Packages/GameKit_gummyapps.0.0.1/Utils/Editor/BuildPostProcess.cs",
 		"/D/backup/work/rios/project_bk/doll001-unity-lua/Assets/Lua/MainApp/Util/DetailConfig.lua",
 		"/D/backup/work/rios/project_bk/doll001-unity-lua/Assets/Lua/MainApp/Util/DebugConfig.lua",
@@ -392,11 +706,7 @@
 		"/Users/kc/work/project/mainapp/doll001-unity-lua/Assets/Lua/MainApp/Game/S35_1_1_qn_sidebar2nd.lua",
 		"/Users/kc/work/project/mainapp/doll001-unity-lua/Assets/Lua/MainApp/Game/S35_1_0_qn_group.lua",
 		"/Users/kc/work/project/mainapp/doll001-unity-lua/Assets/Lua/MainApp/Game/S34_1_0_qn_group.lua",
-		"/Users/kc/work/project/mainapp/doll001-unity-lua/Assets/Lua/MainApp/Game/S33_1_1_qn_sidebar2nd.lua",
-		"/Users/kc/work/project/mainapp/doll001-unity-lua/Assets/Lua/MainApp/Game/S33_1_0_qn_group.lua",
-		"/Users/kc/work/project/mainapp/doll001-unity-lua/Assets/Lua/MainApp/Game/S32_1_1_qn_sidebar2nd.lua",
-		"/Users/kc/work/project/mainapp/doll001-unity-lua/Assets/Lua/MainApp/Game/S32_1_0_qn_group.lua",
-		"/Users/kc/work/project/mainapp/doll001-unity-lua/Assets/Lua/MainApp/Game/S31_1_1_qn_sidebar2nd.lua"
+		"/Users/kc/work/project/mainapp/doll001-unity-lua/Assets/Lua/MainApp/Game/S33_1_1_qn_sidebar2nd.lua"
 	],
 	"find":
 	{
@@ -407,6 +717,7 @@
 		"height": 110.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -414,6 +725,9 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"tabs",
+			"robots",
+			"Sitemap"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -435,6 +749,72 @@
 		{
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "_config.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6731,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5418,
+								5418
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2829.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_tabs/about.md",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 448,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								59,
+								59
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/sublime-markdown-extended/Syntaxes/Markdown Extended.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -490,6 +870,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"robo",
+				"assets\\robots.txt"
+			],
 			[
 				"appcon",
 				"LuaFramework\\Source\\AppConst.cs"
@@ -997,10 +1381,6 @@
 			[
 				"mainapu",
 				"Lua/MainApp/Util/MainAppUtil.lua"
-			],
-			[
-				"AudioManagerw",
-				"LuaFramework/Source/Generate/D3gaUtils_AudioManagerWrap.cs"
 			]
 		],
 		"width": 0.0
@@ -1031,7 +1411,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 177.0,
+	"side_bar_width": 237.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

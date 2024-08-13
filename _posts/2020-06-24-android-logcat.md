@@ -20,7 +20,7 @@ adb start-server
 ```
 
 
-![](android_logcat__366bbx0L.png)
+![](.assets/android_logcat__366bbx0L.png)
 
 
 
