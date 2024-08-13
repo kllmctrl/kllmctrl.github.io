@@ -3,7 +3,7 @@ title: Android app logcat
 date:   2020-06-24 00:00:00 +0700
 categories: [Tech, Android]
 tags: [android, logcat]
-media_subpath: /media
+media_subpath: /_posts
 ---
 
 
