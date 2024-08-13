@@ -24,3 +24,7 @@ package-lock.json
 !.vscode/tasks.json
 
 # Misc
+
+# sublime text
+*.sublime-project
+*.sublime-workspace
