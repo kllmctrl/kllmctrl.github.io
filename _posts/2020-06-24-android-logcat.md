@@ -3,7 +3,7 @@ title: Android app logcat
 date:   2020-06-24 00:00:00 +0700
 categories: [Tech, Android]
 tags: [android, logcat]
-media_subpath: /_posts
+media_subpath: /_posts/.assets
 ---
 
 
@@ -20,7 +20,7 @@ adb start-server
 ```
 
 
-![](.assets/android_logcat__366bbx0L.png)
+![](android_logcat__366bbx0L.png)
 
 
 
